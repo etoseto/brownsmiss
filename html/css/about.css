@@ -1,0 +1,40 @@
+#header{
+	height:138px;
+}
+.about-box{
+	text-align:center;
+}
+.about-title{
+	width:100%;
+	height:80px;
+	font-size:30px;
+	margin-top:10px;
+}
+.about-box p{
+	margin:10px 0;
+}
+.about-content{
+	width:758px;
+	height:200px;
+	border-radius:20px;
+	border:1px solid #666;
+	padding:20px;
+	margin:40px 0;
+}
+.about-item{
+	float:left;
+	height:100px;
+	text-align:center;
+	margin:0 15px;
+	line-height:100px;
+}
+.about-item img{
+	width:81px;
+}
+.about-item p{
+	line-height:1.5em;
+}
+.about-item:first-child{
+	height:80px;
+	line-height:30px;
+}

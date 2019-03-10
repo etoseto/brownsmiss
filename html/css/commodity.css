@@ -1,0 +1,26 @@
+#header{
+	height:138px;
+}
+.commodity-box{
+	margin:40px 0;
+	width:100%;
+}
+.commodity-item{
+	width:240px;
+	height:300px;
+	display:inline-block;
+	margin:10px 10px;
+}
+.img-box{
+	width:240px;
+	height:240px;
+	border:1px solid #f93;
+}
+.img-box img{
+	width:240px;
+}
+.img-title{
+	font-size:12px;
+	text-align:center;
+	line-height:60px;
+}

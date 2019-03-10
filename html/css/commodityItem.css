@@ -1,0 +1,55 @@
+#header{
+	height: 138px;
+}
+.commodity-box{
+	margin: 20px 0;
+	width: 100%;
+	height: 400px;
+}
+.commodity-l{
+	float: left;
+	width: 400px;
+}
+.commodity-r{
+	float: right;
+	width: 400px;
+}
+.commodity-img{
+	width: 400px;
+	height: 400px;
+	overflow: hidden;
+	border: 1px solid #ddd;
+}
+.commodity-img img{
+	width: 100%;
+	height: 100%;
+}
+.commodity-text{
+	margin: 20px 20px;
+}
+.text-title{
+	width: 100%;
+	font-size: 20px;
+	font-weight: bold;
+	color: #000;
+	line-height: 1.5em;
+}
+.text-content{
+	width: 100%;
+	line-height: 1.5em;
+	margin: 20px 0px;
+}
+.text-button{
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	line-height: 40px;
+	display: block;
+	width: 120px;
+	height: 40px;
+	background: #f30;
+	margin-left: 20px;
+}
+.text-button:hover{
+	text-decoration: none;
+}

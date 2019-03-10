@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>后台登录</title>
+<!-- Custom Theme files -->
+<link href="css/login.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+
+</head>
+<body>
+<div class="login">
+	<h2>布诗集团</h2>
+	<div class="login-top">
+		<h1>后台登录</h1>
+		<form>
+			<input type="text"  id="name" placeholder = '用户名' >
+			<input type="password"  id="pass" placeholder = 'password'>
+	    </form>
+	    <div class="forgot">
+	    	<a href="#">忘记密码</a>
+	    	<input type="button" value="登录" onclick="login()" >
+	    </div>
+	</div>
+	<div class="login-bottom">
+		
+	</div>
+</div>	
+<div class="copyright">
+	
+</div>
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+function login(){
+    var name = $("#name").val();
+    var pass = $("#pass").val();
+    if(name == ""){
+      alert("用户名不能为空!");
+      return;
+    }
+    if(pass == ""){
+      alert("密码不能为空!");
+      return;
+    }
+    // $.ajax({
+    //   url:"http://localhost:8080/access/list.action",
+    //   dataType:"json",
+    //   success:function(result){
+    //     var jsonData = result;
+    //     var flag = false;
+    //     //alert(jsonData.length);
+    //     for(var i=0;i<jsonData.length;i++){
+    //       console.log(jsonData[i]["name"]);
+    //       if(name == jsonData[i]["name"] && pass == jsonData[i]["password"]){
+    //         flag =true;
+    //       }
+    //     }
+    //     if(flag){
+    //       window.location.href="index.html";
+    //     }else{
+    //       alert("用户名或密码错误!");
+    //     }
+    //   }
+    // })
+ $.ajax({
+      url:"http://localhost:8080/access/login.action",
+      type:"post",
+      data:{
+        "username":name,
+        "password":pass
+      },
+      dataType:"json",
+      success:function(result){
+      	console.log(result);
+       if(result == "0"){
+       	 window.location.href="admin/adminNews.html";
+       }else{
+       	alert("用户名或密码错误!");
+       }
+
+      }
+    })
+
+  }
+</script>
+</body>
+</html>
